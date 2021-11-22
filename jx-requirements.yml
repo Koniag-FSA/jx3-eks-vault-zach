@@ -5,51 +5,28 @@ spec:
     enabled: false
     schedule: ""
   cluster:
-    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    clusterName: tf-jx-assured-grouse
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    project: "869029222515"
     provider: eks
-    region: us-east-1
-    registry: 869029222515.dkr.ecr.us-east-1.amazonaws.com
   environments:
   - key: dev
-    owner: Koniag-FSA
-    repository: jx3-eks-vault-zach
   - key: staging
   - key: production
   ingress:
-    domain: 54.156.150.101.nip.io
-    kind: ingress
+    domain: ""
+    externalDNS: false
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
-  pipelineUser:
-    username: jx-aws-bot
   repository: nexus
   secretStorage: vault
-  storage:
-  - name: logs
-    url: s3://logs-tf-jx-assured-grouse-20211122170644511700000007
-  - name: reports
-    url: s3://reports-tf-jx-assured-grouse-20211122170644511600000006
-  - name: repository
-    url: s3://repository-tf-jx-assured-grouse-20211122170644485200000004
-  terraform: true
   vault:
     aws:
       autoCreate: true
-      dynamoDBRegion: us-east-1
-      dynamoDBTable: vault-unseal-tf-jx-assured-grouse-SeHaoRBi
-      kmsKeyId: c2c7340d-74ca-4ed5-8d1f-fd2ad14ba210
-      kmsRegion: us-east-1
-      s3Bucket: vault-unseal-tf-jx-assured-grouse-20211122170644511600000005
-      s3Region: us-east-1
   webhook: lighthouse
