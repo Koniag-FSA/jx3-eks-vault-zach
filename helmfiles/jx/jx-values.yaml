@@ -21,7 +21,7 @@ jxRequirements:
     schedule: ""
   cluster:
     chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    clusterName: tf-jx-assured-grouse
+    clusterName: tf-jx-rare-pika
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
@@ -39,7 +39,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: 54.156.150.101.nip.io
+    domain: change.me
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
@@ -52,20 +52,20 @@ jxRequirements:
   secretStorage: vault
   storage:
   - name: logs
-    url: s3://logs-tf-jx-assured-grouse-20211122170644511700000007
+    url: s3://logs-tf-jx-rare-pika-2021112220372319210000000b
   - name: reports
-    url: s3://reports-tf-jx-assured-grouse-20211122170644511600000006
+    url: s3://reports-tf-jx-rare-pika-20211122203722033000000006
   - name: repository
-    url: s3://repository-tf-jx-assured-grouse-20211122170644485200000004
+    url: s3://repository-tf-jx-rare-pika-20211122203722038700000008
   terraform: true
   vault:
     aws:
       autoCreate: true
       dynamoDBRegion: us-east-1
-      dynamoDBTable: vault-unseal-tf-jx-assured-grouse-SeHaoRBi
-      kmsKeyId: c2c7340d-74ca-4ed5-8d1f-fd2ad14ba210
+      dynamoDBTable: vault-unseal-tf-jx-rare-pika-8xxihXWA
+      kmsKeyId: 6890d6ef-b892-40f8-a150-acfb62c9f004
       kmsRegion: us-east-1
-      s3Bucket: vault-unseal-tf-jx-assured-grouse-20211122170644511600000005
+      s3Bucket: vault-unseal-tf-jx-rare-pika-20211122203722033200000007
       s3Region: us-east-1
   webhook: lighthouse
 jxRequirementsIngressExternalDNS:
