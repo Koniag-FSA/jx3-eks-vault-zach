@@ -23,6 +23,6 @@ metadata:
     app.kubernetes.io/part-of: tekton-pipelines
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::869029222515:role/tf-jx-golden-anchovy-tekton-bot
+    eks.amazonaws.com/role-arn: arn:aws:iam::869029222515:role/tf-jx-assured-grouse-tekton-bot
     meta.helm.sh/release-name: 'tekton-pipeline'
 secrets:

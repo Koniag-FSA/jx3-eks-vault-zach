@@ -33,7 +33,7 @@ spec:
     pipelineUserEmail: "jenkins-x@googlegroups.com"
     prowConfig: Scheduler
     storageLocations:
-      - bucketUrl: s3://logs-tf-jx-golden-anchovy-20211118210712246100000007
+      - bucketUrl: s3://logs-tf-jx-assured-grouse-20211122170644511700000007
         classifier: logs
-      - bucketUrl: s3://reports-tf-jx-golden-anchovy-20211118210712244100000004
+      - bucketUrl: s3://reports-tf-jx-assured-grouse-20211122170644511600000006
         classifier: reports
