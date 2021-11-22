@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - Koniag-FSA/jx3-eks-vault-zach
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.54.243.37.203.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
