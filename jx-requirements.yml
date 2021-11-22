@@ -1,3 +1,4 @@
+
 apiVersion: core.jenkins-x.io/v4beta1
 kind: Requirements
 spec:
@@ -5,51 +6,28 @@ spec:
     enabled: false
     schedule: ""
   cluster:
-    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
-    clusterName: tf-jx-eager-macaw
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
     gitKind: github
     gitName: github
     gitServer: https://github.com
-    project: "869029222515"
     provider: eks
-    region: us-east-1
-    registry: 869029222515.dkr.ecr.us-east-1.amazonaws.com
   environments:
   - key: dev
-    owner: Koniag-FSA
-    repository: jx3-eks-vault-zach
   - key: staging
   - key: production
   ingress:
-    domain: 44.199.116.109.nip.io
-    kind: ingress
+    domain: ""
+    externalDNS: false
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
-  pipelineUser:
-    username: jx-aws-bot
   repository: nexus
   secretStorage: vault
-  storage:
-  - name: logs
-    url: s3://logs-tf-jx-eager-macaw-20211122162702201400000005
-  - name: reports
-    url: s3://reports-tf-jx-eager-macaw-20211122162702199900000003
-  - name: repository
-    url: s3://repository-tf-jx-eager-macaw-20211122162702213800000007
-  terraform: true
   vault:
     aws:
       autoCreate: true
-      dynamoDBRegion: us-east-1
-      dynamoDBTable: vault-unseal-tf-jx-eager-macaw-99oR5XfG
-      kmsKeyId: 738f2781-60af-4c74-9d82-a02a319fdfa0
-      kmsRegion: us-east-1
-      s3Bucket: vault-unseal-tf-jx-eager-macaw-20211122162702202600000006
-      s3Region: us-east-1
   webhook: lighthouse
